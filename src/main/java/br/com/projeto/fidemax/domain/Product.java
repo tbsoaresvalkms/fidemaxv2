@@ -37,4 +37,7 @@ public class Product implements Serializable {
     @OneToMany(mappedBy = "product")
     private Set<Price> prices = new HashSet<>();
 
+    @ManyToOne(optional = false)
+    @NotNull
+    private Company company;
 }

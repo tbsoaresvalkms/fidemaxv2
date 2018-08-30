@@ -10,6 +10,16 @@ public class EmployeeDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    private String name;
+
+    @NotNull
+    private String email;
+
+    @NotNull
+    private String password;
+
+
     private Office office;
 
     private Long companyId;

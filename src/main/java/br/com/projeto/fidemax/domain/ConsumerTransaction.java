@@ -28,7 +28,7 @@ public class ConsumerTransaction implements Serializable {
     @Column(name = "balance", precision = 10, scale = 2, nullable = false)
     private BigDecimal balance;
 
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     @NotNull
     @JoinColumn(unique = true)
     private Employee employee;

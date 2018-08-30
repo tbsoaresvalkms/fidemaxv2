@@ -1,5 +1,6 @@
 package br.com.projeto.fidemax.service.dto;
 
+import com.sun.istack.internal.NotNull;
 import lombok.Data;
 
 import javax.persistence.Lob;
@@ -11,6 +12,15 @@ import java.io.Serializable;
 public class CustomerDTO implements Serializable {
 
     private Long id;
+
+    @NotNull
+    private String name;
+
+    @NotNull
+    private String email;
+
+    @NotNull
+    private String password;
 
     @NotNull
     @Pattern(regexp = "^[0-9]{11}$")
